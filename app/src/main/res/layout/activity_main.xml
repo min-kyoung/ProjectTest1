@@ -1,18 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp"
+tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tableLayout"
+        tools:ignore="MissingConstraints">
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingTop="100dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="ID"
+                android:id="@+id/textView"
+                android:layout_column="0"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:background="#e6e6fa" />
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/editText_id"
+                android:layout_column="1"
+                android:layout_weight="1" />
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="50dp"
+                android:text="PASSWORD"
+                android:id="@+id/textView2"
+                android:layout_column="0"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:background="#e6e6fa" />
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/editText_pw"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:maxLength="10"
+                android:inputType="textPassword"/>
+        </TableRow>
+        <Button
+            android:id="@+id/ButtonLOGIN"
+            android:onClick="onClick1"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:text="로그인"
+            android:textSize="20dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="70dp"
+            tools:layout_editor_absoluteY="250dp" />
+        <Button
+            android:id="@+id/ButtonJOIN"
+            android:onClick="onClick2"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:text="회원가입"
+            android:textSize="20dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="200dp"
+            tools:layout_editor_absoluteY="250dp" />
+
+
+    </TableLayout>
+
+
 
 </android.support.constraint.ConstraintLayout>

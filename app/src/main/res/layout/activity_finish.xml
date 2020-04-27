@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".FinishActivity">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tableLayout"
+        tools:ignore="MissingConstraints">
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingTop="100dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Login Success"
+                android:id="@+id/textSuccess"
+                android:layout_column="0"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal" />
+        </TableRow>
+
+        <Button
+            android:id="@+id/ButtonLOGOUT"
+            android:onClick="onClickLOUOUT"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tableLayout"
+            android:layout_centerHorizontal="true"
+            android:text="로그아웃"
+            android:textSize="24sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="150dp"
+            tools:layout_editor_absoluteY="500dp" />
+    </TableLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>
